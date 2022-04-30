@@ -13,7 +13,8 @@ datasource db {
 model Product {
   id            Int      @id @default(autoincrement())
   name          String   @db.VarChar(255)
-  description   String
+  category      String
+  description   String  @db.VarChar(255)
   image         String
   price         Int
 }
@@ -21,6 +22,6 @@ model Product {
 model User {
   id Int @id @default(autoincrement())
   username String @db.VarChar(255)
-  email String
+  email String @unique
   password String
 }
