@@ -16,6 +16,7 @@ model Product {
   category      String
   description   String  @db.VarChar(255)
   image         String
+  rating        Int     @default(4)
   price         Int
 }
 
