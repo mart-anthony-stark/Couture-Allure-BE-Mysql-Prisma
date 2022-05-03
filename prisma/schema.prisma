@@ -24,5 +24,6 @@ model User {
   id Int @id @default(autoincrement())
   username String @db.VarChar(255)
   email String @unique
+  contact String @db.VarChar(255)
   password String
 }
